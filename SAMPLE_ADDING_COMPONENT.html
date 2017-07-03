@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Adding Component</title>
+    <meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head> 
+<body>
+<div class="container-fluid">
+	<div>
+	</div>
+	<div class="row">
+		<div class="col-md-6" >
+		  <h2>Adding Component</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container-fluid">
+			<table class="table table-striped">
+			<thead>
+			</thead>
+				<tbody>
+				  <tr>
+					<td>
+					<div class="col-md-4">
+							<div class="form-group">
+							  <label for="component_name">Component Name:</label>
+							  <input type="text" class="form-control" id="component_name" placeholder="Input new component name">
+							</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="component_type">Component Type:</label>
+						 	<input list="componenttype" class="form-control" type="text" id="component_type"  placeholder="Select component type">
+							<datalist id="componenttype">
+								<option value="Assembly"></option>
+								<option value="BOM"></option>
+								<option value="Paragraph"></option>
+								<option value="Process"></option>
+								<option value="System"></option>
+								<option value="Test"></option>
+							</datalist>
+						</div>
+					</div>
+						<div class="col-md-1">
+								  <form> 
+								  <label style="margin-bottom: 0px">BOM Type:</label>
+									<div class="radio">
+									  <label class="disabled"><input type="radio" name="bomtyperadio" disabled="disabled">Assembly</label>
+									</div>
+									<div class="radio">
+									  <label class="disabled"><input type="radio" name="bomtyperadio" disabled="disabled">Packing</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-1">
+								  <form> 
+								  <label style="margin-bottom: 0px">Global:</label>
+									<div class="radio">
+									  <label><input type="radio" name="globalradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="globalradio">No</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-1">
+								  <form> 
+								  <label style="margin-bottom: 0px">Visible:</label>
+									<div class="radio">
+									  <label><input type="radio" name="visibleradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="visibleradio">No</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-1">
+								  <form> 
+								  <label style="margin-bottom: 0px" >Internal:</label>
+									<div class="radio">
+									  <label><input type="radio" name="internalradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="internalradio">No</label>
+									</div>
+								  </form>
+						</div>
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						<div class="col-md-4">
+							<div class="form-group">
+							  <label for="selection_type">Selection Type:</label>
+								<input list="selectiontype" class="form-control" type="text" id="selection_type" placeholder="Optional">
+								<datalist id="selectiontype">
+									<option value="Selection Type 1"></option>
+									<option value="Selection Type 2"></option>
+									<option value="Selection Type 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+							  <label for="selection_value">Selection Value:</label>
+								<input type="text" class="form-control" id="selection_value" placeholder="Input Selection Value">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<label for="format">Format:</label>
+							  <input type="text" class="form-control" id="format" placeholder="Optional (in regex)">
+						</div>
+						<div class="col-md-2">
+							<label for="format_desc">Format Description:</label>
+							  <input type="text" class="form-control" id="format_desc" placeholder="Input Description">
+						</div>
+					</td>
+				  </tr>
+				<tr>
+					<td>
+						<div class="col-md-2">
+								  <form> 
+								  <label style="margin-bottom: 0px">Allowed in any Subflow:</label>
+									<div class="radio">
+									  <label><input type="radio" name="allowedsubflowradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="allowedsubflowradio">No</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="allowed_facility_at">Facility A/T:</label>
+								<input disabled="disabled" list="allowed_facility_at" class="form-control" type="text" id="allowed_facility_at" placeholder="Select Facility A/T">
+								<datalist id="allowed_facility_at">
+									<option value="Facility 1"></option>
+									<option value="Facility 2"></option>
+									<option value="Facility 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="allowed_operation_name">Operation Name:</label>
+								<input disabled="disabled" 	list="allowedoperationname" class="form-control" type="text" id="allowed_operation_name" placeholder="Select Operation">
+								<datalist id="allowedoperationname">
+									<option value="Operation 1"></option>
+									<option value="Operation 2"></option>
+									<option value="Operation 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="subflow_type">Subflow Type:</label>
+								<input disabled="disabled" 	list="subflowtype" class="form-control" type="text" id="subflow_type" placeholder="Select Subflow Type">
+								<datalist id="subflowtype">
+									<option value="Subflow Type 1"></option>
+									<option value="Subflow Type 2"></option>
+									<option value="Subflow Type 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="SBE1">SBE 1:</label>
+								<input disabled="disabled" 	list="SBE1List" class="form-control" type="text" id="SBE1" placeholder="Select SBE">
+								<datalist id="SBE1List">
+									<option value="SBE #1 1"></option>
+									<option value="SBE #1 2"></option>
+									<option value="SBE #1 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="SBE2">SBE 2:</label>
+								<input disabled="disabled" list="SBE2List" class="form-control" type="text" id="SBE2" placeholder="Select SBE">
+								<datalist id="SBE2List">
+									<option value="SBE #2 1"></option>
+									<option value="SBE #2 2"></option>
+									<option value="SBE #2 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="SBE3">SBE 3:</label>
+								<input disabled="disabled" list="SBE3List" class="form-control" type="text" id="SBE3" placeholder="Select SBE">
+								<datalist id="SBE3List">
+									<option value="SBE #3 1"></option>
+									<option value="SBE #3 2"></option>
+									<option value="SBE #3 3"></option>
+								</datalist>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="col-md-2">
+								  <form> 
+								  <label style="margin-bottom: 0px">Required in any Subflow:</label>
+									<div class="radio">
+									  <label><input type="radio" name="requiredsubflowradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="requiredsubflowradio">No</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="required_subflow_facility_at">Facility A/T:</label>
+								<input disabled="disabled" list="requiredsubflowfacilityat" class="form-control" type="text" id="required_subflow_facility_at" placeholder="Select Facility A/T">
+								<datalist id="requiredsubflowfacilityat">
+									<option value="Facility 1"></option>
+									<option value="Facility 2"></option>
+									<option value="Facility 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="required_subflow_operation_name">Operation Name:</label>
+								<input disabled="disabled" list="requiredsubflowoperation" class="form-control" type="text" id="required_subflow_operation_name" placeholder="Select Operation">
+								<datalist id="requiredsubflowoperation">
+									<option value="Operation 1"></option>
+									<option value="Operation 2"></option>
+									<option value="Operation 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="require_ssubflow_type">Subflow Type:</label>
+								<input disabled="disabled" list="requiredssubflow" class="form-control" type="text" id="required_ssubflow_type" placeholder="Select Subflow Type">
+								<datalist id="requiredssubflow">
+									<option value="Subflow Type 1"></option>
+									<option value="Subflow Type 2"></option>
+									<option value="Subflow Type 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_subflow_SBE1">SBE 1:</label>
+								<input disabled="disabled" list="requiredsubflowSBE1List" class="form-control" type="text" id="required_subflow_SBE1" placeholder="Select SBE">
+								<datalist id="requiredsubflowSBE1List">
+									<option value="SBE #1 1"></option>
+									<option value="SBE #1 2"></option>
+									<option value="SBE #1 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_subflow_SBE2">SBE 2:</label>
+								<input disabled="disabled" list="requiredsubflowSBE2List" class="form-control" type="text" id="required_subflow_SBE2" placeholder="Select SBE">
+								<datalist id="requiredsubflowSBE2List">
+									<option value="SBE #2 1"></option>
+									<option value="SBE #2 2"></option>
+									<option value="SBE #2 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_subflow_SBE3">SBE 3:</label>
+								<input disabled="disabled" list="requiredsubflowSBE3List" class="form-control" type="text" id="required_subflow_SBE3" placeholder="Select SBE">
+								<datalist id="requiredsubflowSBE3List">
+									<option value="SBE #3 1"></option>
+									<option value="SBE #3 2"></option>
+									<option value="SBE #3 3"></option>
+								</datalist>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="col-md-2">
+								  <form> 
+								  <label style="margin-bottom: 0px">Required in any Operation:</label>
+									<div class="radio">
+									  <label><input type="radio" name="requiredoperationradio">Yes</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="requiredoperationradio">No</label>
+									</div>
+								  </form>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="required_operation_facility_at">Facility A/T:</label>
+								<input disabled="disabled" list="requiredoperationfacility" class="form-control" type="text" id="required_operation_facility_at" placeholder="Select Facility A/T">
+								<datalist id="requiredoperationfacility">
+									<option value="Facility 1"></option>
+									<option value="Facility 2"></option>
+									<option value="Facility 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="required_operation_operation_name">Operation Name:</label>
+								<input disabled="disabled" list="requiredoperationoperation" class="form-control" type="text" id="required_operation_operation_name" placeholder="Select Operation">
+								<datalist id="requiredoperationoperation">
+									<option value="Operation 1"></option>
+									<option value="Operation 2"></option>
+									<option value="Operation 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+							  <label for="required_operation_subflow_type">Subflow Type:</label>
+								<input disabled="disabled" list="requiredoperationsubflow" class="form-control" type="text" id="required_operation_subflow_type" placeholder="Select Subflow Type">
+								<datalist id="requiredoperationsubflow">
+									<option value="Subflow Type 1"></option>
+									<option value="Subflow Type 2"></option>
+									<option value="Subflow Type 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_operation_SBE1">SBE 1:</label>
+								<input disabled="disabled" list="requiredoperationSBE1List" class="form-control" type="text" id="required_operation_SBE1" placeholder="Select SBE">
+								<datalist id="requiredoperationSBE1List">
+									<option value="SBE #1 1"></option>
+									<option value="SBE #1 2"></option>
+									<option value="SBE #1 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_operation_SBE2">SBE 2:</label>
+								<input disabled="disabled" list="requiredoperationSBE2List" class="form-control" type="text" id="required_operation_SBE2" placeholder="Select SBE">
+								<datalist id="requiredoperationSBE2List">
+									<option value="SBE #2 1"></option>
+									<option value="SBE #2 2"></option>
+									<option value="SBE #2 3"></option>
+								</datalist>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="form-group">
+							  <label for="required_operation_SBE3">SBE 3:</label>
+								<input disabled="disabled" list="requiredoperationSBE3List" class="form-control" type="text" id="required_operation_SBE3" placeholder="Select SBE">
+								<datalist id="requiredoperationSBE3List">
+									<option value="SBE #3 1"></option>
+									<option value="SBE #3 2"></option>
+									<option value="SBE #3 3"></option>
+								</datalist>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>						
+							
+						<div class="panel panel-info">
+							<button type="button" class="btn btn-primary btn-lg btn-block ">Add New Attribute</button>
+							<div class="panel-heading">	
+								<div class="box-container">
+									<button type="button" class="btn btn-xs btn-default">
+										<span class="glyphicon glyphicon-remove">
+									</button>
+									<div class="panel-body">
+											<div class="col-md-2">
+												<label for="attribute_name">Attribiute Name:</label>
+												<input type="text" class="form-control" id="attribute_name" placeholder="Input new attribute name">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_value">Attribiute Value:</label>
+												<input type="text" class="form-control" id="attribute_value" placeholder="Input attribute value">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_format">Format:</label>
+												  <input type="text" class="form-control" id="attribute_format" placeholder="Optional (in regex)">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_format_desc">Format Description:</label>
+												  <input type="text" class="form-control" id="attribute_format_desc" placeholder="Input Description">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_sequence">Attribute Sequence:</label>
+												  <input type="text" class="form-control" id="attribute_sequence" placeholder="Input Attribute Sequence">
+											</div>
+											<div class="col-md-2">
+													  <label style="margin-bottom: 0px">ECO Attribute:</label>
+													 <form>
+															<label class="radio-inline">
+															<input type="radio" name="optradio">Yes</label>
+															<label class="radio-inline">
+															<input type="radio" name="optradio">No</label>
+													 </form>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				 </tr>
+				 <tr>
+					<td>
+						<div class="panel panel-info">
+							<button type="button" class="btn btn-primary btn-lg btn-block ">Add Existing Attribute</button>
+							<div class="panel-heading">	
+								<div class="box-container">
+									<button type="button" class="btn btn-xs btn-default">
+										<span class="glyphicon glyphicon-remove">
+									</button>
+									<div class="panel-body">
+										<div class="col-md-2">
+											<label for="existing_attribute_name">Existing Attribiute Name:</label>
+											<input list="existing_attrib_name" class="form-control" type="text" id="existing_attribute_name" placeholder="Select existing attribute name">
+											<datalist id="existing_attrib_name">
+												<option value="Operation 1"></option>
+												<option value="Operation 2"></option>
+												<option value="Operation 3"></option>
+											</datalist>
+										</div>
+											<div class="col-md-2">
+												<label for="attribute_value">Attribiute Value:</label>
+												<input disabled type="text" class="form-control" id="attribute_value" placeholder="Attribute value">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_format">Format:</label>
+												  <input disabled type="text" class="form-control" id="attribute_format" placeholder="Format (Optional)">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_format_desc">Format Description:</label>
+												  <input disabled type="text" class="form-control" id="attribute_format_desc" placeholder="Format Description">
+											</div>
+											<div class="col-md-2">
+												<label for="attribute_sequence">Attribute Sequence:</label>
+												  <input disabled type="text" class="form-control" id="attribute_sequence" placeholder="Attribute Sequence">
+											</div>
+											<div class="col-md-2">
+													  <label style="margin-bottom: 0px">ECO Attribute:</label>
+													 <form>
+															<label  class="radio-inline disabled">
+															<input type="radio" name="optradio" disabled="disabled">Yes</label>
+															<label  class="radio-inline disabled">
+															<input type="radio" name="optradio" disabled="disabled">No</label>
+													 </form>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				 </tr>
+				 
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+	
+</body>
+
+<script>
+$(document).ready(function(){
+
+   // jQuery methods go here...
+
+});	
+</script>
+</html>
+
